@@ -12,6 +12,13 @@ To create an alias so that you can use it by simply running `$ mntftp [command]`
 ### Command line tools
 ```
 $ mount.sh h
+mntftp -  Simple FTP Mount tool for Linux
+
+Copyright (C) 2020 Dovi Cowan - dovi@fullynetworking.co.uk
+This program comes with ABSOLUTELY NO WARRANTY; for details see the GNU GPL v3.0.
+This is free software, and you are welcome to redistribute it
+under certain conditions; see the GNU GPL v3.0.
+
 FTP MOUNTER v1
 
 FTP MOUNTER uses curlftpfs to mount FTP drives to a local folder.

@@ -17,11 +17,12 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 echo "mntftp -  Simple FTP Mount tool for Linux"
+echo
 echo "Copyright (C) 2020 Dovi Cowan - dovi@fullynetworking.co.uk"
 echo "This program comes with ABSOLUTELY NO WARRANTY; for details see the GNU GPL v3.0."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; see the GNU GPL v3.0."
-
+echo
 echo "FTP MOUNTER v1"
 echo
 

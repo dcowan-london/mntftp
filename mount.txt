@@ -1,0 +1,4 @@
+# mntftp mounts.txt file
+# Syntax:
+# ftp_username:ftp_password:ftp_server:mountname
+

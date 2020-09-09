@@ -26,7 +26,7 @@ echo
 echo "FTP MOUNTER v1"
 echo
 
-MOUNTS_FILE=~/dev/mount.txt
+MOUNTS_FILE=~/.local/share/mount.txt
 
 if [ "$1" = "" ]
 then

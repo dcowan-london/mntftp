@@ -65,6 +65,6 @@ echo -n "Adding .bashrc alias... "
 echo "alias mntftp=\"$INSTALL_DIR/mount.sh\"" >> ~/.bashrc
 echo "done"
 echo -n "Creating mount.txt... "
-touch $INSTALL_DIR/mount.txt
+curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.txt --output $INSTALLDIR/mount.txt
 echo "done"
 echo -e "\e[1mDone installing mntftp. Run \"mntftp help\" to get started.\e[0m"

@@ -67,4 +67,7 @@ echo "done"
 echo -n "Creating mount.txt... "
 curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.txt --output $INSTALLDIR/mount.txt
 echo "done"
+echo -n "Removing install script... "
+rm install.sh
+echo "done"
 echo -e "\e[1mDone installing mntftp. Run \"mntftp help\" to get started.\e[0m"

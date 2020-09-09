@@ -54,30 +54,32 @@ case "$1" in
 		LINES=(${IN//$'\n'/ })
 
 		for i in "${LINES[@]}"; do
-			IFS=':' read -ra ADDR <<< "$i"
-			#echo ${ADDR[0]}
-			if [ "${ADDR[3]}" = "$2" ]
-			then
-				if [ -d ~/mnt/${ADDR[3]} ]
+			if [ "${i:0:1}" != "#" ]; then
+				IFS=':' read -ra ADDR <<< "$i"
+				#echo ${ADDR[0]}
+				if [ "${ADDR[3]}" = "$2" ]
 				then
-					echo "Mountpoint exists. Mounting ..."
-				else
-					echo "Mountpoint doesn't exist. Creating mountpoint ..."
-					mkdir ~/mnt/${ADDR[3]}
-					echo "Created mountpoint. Mounting ..."
-				fi
+					if [ -d ~/mnt/${ADDR[3]} ]
+					then
+						echo "Mountpoint exists. Mounting ..."
+					else
+						echo "Mountpoint doesn't exist. Creating mountpoint ..."
+						mkdir ~/mnt/${ADDR[3]}
+						echo "Created mountpoint. Mounting ..."
+					fi
 
-				if [ "$(ls -A ~/mnt/${ADDR[3]})" ];
-				then
-					echo "Mountpoint in use!"
-					echo "Ensure the mountpoint is empty before mounting"
-					exit 1
-				fi
+					if [ "$(ls -A ~/mnt/${ADDR[3]})" ];
+					then
+						echo "Mountpoint in use!"
+						echo "Ensure the mountpoint is empty before mounting"
+						exit 1
+					fi
 
-				curlftpfs -o user="${ADDR[0]}:${ADDR[1]}" ${ADDR[2]} ~/mnt/${ADDR[3]}
-				echo "Mounted"
-				#echo "$2"
-				exit 0
+					curlftpfs -o user="${ADDR[0]}:${ADDR[1]}" ${ADDR[2]} ~/mnt/${ADDR[3]}
+					echo "Mounted"
+					#echo "$2"
+					exit 0
+				fi
 			fi
 		done
 

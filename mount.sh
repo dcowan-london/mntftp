@@ -135,7 +135,7 @@ case "$1" in
 	;;
 
 	edit|e)
-		nano $MOUNTS_FILE
+		sudo nano $MOUNTS_FILE
 		exit 0
 	;;
 

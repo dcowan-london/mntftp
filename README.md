@@ -10,6 +10,8 @@ Just paste the following line into a terminal to get set up:
 
 `cd; wget https://github.com/dcowan-london/mntftp/raw/master/install.sh; chmod +x install.sh; ./install.sh`
 
+You will then need to close and reopen any open terminal windows. You may need to log out and log back in.
+
 #### Manual Installation
 You'll need to install `curlftpfs` - on Debian based distros, run:
 `$ sudo apt install curlftpfs`.

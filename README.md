@@ -2,6 +2,15 @@
 Mount remote FTP folders as local directories
 
 ## Usage
+
+### Installation
+
+#### Automatic Installation
+Just paste the following line into a terminal to get set up:
+
+`cd; wget https://github.com/dcowan-london/mntftp/raw/master/install.sh; chmod +x install.sh; ./install.sh`
+
+#### Manual Installation
 You'll need to install `curlftpfs` - on Debian based distros, run:
 `$ sudo apt install curlftpfs`.
 

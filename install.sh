@@ -47,26 +47,26 @@ else
     then
         echo -n "Creating folder ~/.local/share/mntftp... "
         mkdir ~/.local/share/mntftp
-        INSTALL_DIR="~/.local/share/mntftp"
+        INSTALL_DIR="$HOME/.local/share/mntftp"
         echo "done"
     else
         echo -n "Creating folder ~/mntftp... "
-        INSTALL_DIR="~/mntftp"
+        INSTALL_DIR="$HOME/mntftp"
         mkdir ~/mntftp
         echo "done"
     fi
     echo -n "Downloading mount.sh... "
-    sudo curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.sh --output $INSTALLDIR/mount.sh
+    sudo curl -s https://raw.githubusercontent.com/dcowan-london/mntftp/master/mount.sh --output $INSTALL_DIR/mount.sh
     echo "done"
     echo -n "Making mount.sh executable... "
-    chmod +x $INSTALL_DIR/mount.sh
+    sudo chmod +x $INSTALL_DIR/mount.sh
     echo "done"
 fi
 echo -n "Adding .bashrc alias... "
 echo "alias mntftp=\"$INSTALL_DIR/mount.sh\"" >> ~/.bashrc
 echo "done"
 echo -n "Creating mount.txt... "
-sudo curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.txt --output $INSTALLDIR/mount.txt
+sudo curl -s https://raw.githubusercontent.com/dcowan-london/mntftp/master/mount.txt --output $INSTALL_DIR/mount.txt
 echo "done"
 echo -n "Removing install script... "
 rm install.sh

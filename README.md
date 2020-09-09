@@ -56,6 +56,8 @@ ftp_username:ftp_password:ftp_server:mountname
 
 The `mount.txt` file can have as many lines as you wish.
 
+You can add comments by beginning a line with a #.
+
 You can tell the tool to look for `mount.txt` somewhere else with:
 ```
 $ mount.sh command mountname /path/to/mount.txt

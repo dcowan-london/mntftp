@@ -7,6 +7,9 @@ You'll need to install `curlftpfs` - on Debian based distros, run:
 
 Download `mount.sh` and save it on your computer, and create a folder `~/mnt` This is where the FTP folders will be mounted.
 
+Make `mount.sh` executable:
+`$ chmod +x /path/to/mount.sh`
+
 To create an alias so that you can use it by simply running `$ mntftp [command]`, add `alias mntftp="/path/to/mount.sh"` to your `~/.bashrc`.
 
 ### Command line tools

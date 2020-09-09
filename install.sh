@@ -43,7 +43,8 @@ if test -f "mount.sh"; then
     echo "done"
 else
     echo "no"
-    if test -d "~/.local/share"; then
+    if test -d ~/.local/share;
+    then
         echo -n "Creating folder ~/.local/share/mntftp... "
         mkdir ~/.local/share/mntftp
         INSTALL_DIR="~/.local/share/mntftp"

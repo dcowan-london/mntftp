@@ -56,7 +56,7 @@ else
         echo "done"
     fi
     echo -n "Downloading mount.sh... "
-    curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.sh --output $INSTALLDIR/mount.sh
+    sudo curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.sh --output $INSTALLDIR/mount.sh
     echo "done"
     echo -n "Making mount.sh executable... "
     chmod +x $INSTALL_DIR/mount.sh
@@ -66,7 +66,7 @@ echo -n "Adding .bashrc alias... "
 echo "alias mntftp=\"$INSTALL_DIR/mount.sh\"" >> ~/.bashrc
 echo "done"
 echo -n "Creating mount.txt... "
-curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.txt --output $INSTALLDIR/mount.txt
+sudo curl -s https://github.com/dcowan-london/mntftp/raw/master/mount.txt --output $INSTALLDIR/mount.txt
 echo "done"
 echo -n "Removing install script... "
 rm install.sh

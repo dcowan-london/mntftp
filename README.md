@@ -8,7 +8,7 @@ Mount remote FTP folders as local directories
 #### Automatic Installation
 Just paste the following line into a terminal to get set up:
 
-`cd; wget https://github.com/dcowan-london/mntftp/raw/master/install.sh; chmod +x install.sh; ./install.sh`
+`cd; wget https://raw.githubusercontent.com/dcowan-london/mntftp/master/install.sh; chmod +x install.sh; ./install.sh`
 
 You will then need to close and reopen any open terminal windows. You may need to log out and log back in.
 
